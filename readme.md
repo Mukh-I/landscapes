@@ -2,8 +2,8 @@
 
 A landing page for a fictional landscaping company.
 
-## Built with:
+### Technologies used:
 
-- html5
-- css3
-- javaScript
+  - html5
+  - css3
+  - javaScript
