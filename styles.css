@@ -317,14 +317,18 @@ hr {
 .about__images {
   width: 400px;
   height: 400px;
-  position: relative;
+
+  background-image: url("https://www.vibrantlandscapes.co.uk/wp-content/uploads/2020/01/Porcelain-Paving-Fitting-Birmingham-4.jpg");
+  background-position: center;
+  background-size: cover;
+
+  box-shadow: -2px -2px 20px 2px rgba(50, 50, 50, 0.36);
+  border-radius: 50%;
 }
 
 .about__images img:first-of-type {
   width: 100%;
   height: 100%;
-  box-shadow: -2px -2px 20px 2px rgba(50, 50, 50, 0.36);
-  border-radius: 50%;
 }
 
 /* Services */
@@ -509,6 +513,29 @@ hr {
 
   /* THIS creates the animation! */
   transition: transform 1s;
+}
+
+.reviews .prev,
+.reviews .next {
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  width: auto;
+  margin-top: -22px;
+  padding: 8px;
+  color: tomato;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.reviews .prev {
+  margin-right: 71px;
+}
+
+.reviews .prev:hover,
+.reviews .next:hover {
+  transition: color 0.3s ease;
+  color: rgb(238, 63, 32);
 }
 
 .review h3,

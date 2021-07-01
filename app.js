@@ -77,26 +77,30 @@ tabContainer.addEventListener("click", (e) => {
 
 // Testimonials
 const reviews = document.querySelectorAll(".review");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
 
 reviews.forEach((review, index) => {
   review.style.transform = `translateX(${100 * index}%)`;
 });
 
 let currentReview = 0;
-let firstReview = 0;
 const lastReview = reviews.length - 1;
 
-//showCurrentReview(); TODO
+nextBtn.addEventListener("click", function () {
+  if (currentReview !== lastReview) {
+    currentReview++;
+    displayReviewe(currentReview);
+  }
+});
+prevBtn.addEventListener("click", function () {
+  if (currentReview < 1) return;
+  currentReview--;
+  displayReviewe(currentReview);
+});
 
-// function showCurrentReview() {
-//   if (currentReview === lastReview) {
-//     currentReview = 0;
-//   } else {
-//     currentReview++;
-//   }
-
-//   reviews.forEach((review, index) => {
-//     review.style.transform = `translateX(${110 * (index - currentReview)}%)`;
-//   });
-//   setTimeout(showCurrentReview, 3000); // Change image every 2 seconds
-// }
+function displayReviewe(currentReview) {
+  reviews.forEach((review, index) => {
+    review.style.transform = `translateX(${110 * (index - currentReview)}%)`;
+  });
+}
